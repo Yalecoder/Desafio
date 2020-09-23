@@ -1,0 +1,207 @@
+body{
+    background-color: #EEEEEE;
+}
+
+.tt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.add{
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: -13px;
+    height: 100vh;
+    display: none;
+    left: 0px;
+    transition: 0.3s;
+    animation: offset 0.2s;
+}
+
+@keyframes offset{
+    from{
+        opacity: 0.6;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.bx{
+    background: white;
+    width: 600px;
+    box-shadow: 0px 0px 3px;
+}
+
+.bc{
+    width: 100%;
+    height: 60px;
+}
+
+.nm{
+    color: #EC3E62;
+    float: left;
+    margin-left: 15px;
+}
+
+.serc{
+    height: 60px;
+    display: flex;
+    float: right;
+    margin-right: 15px;
+}
+
+.serc a{
+    align-self: center;
+}
+
+.serc .ii {
+    align-self: center;
+    color: #EC3E62;
+    font-size: xx-large;
+}
+
+.ser{
+    color: #EC3E62;
+    padding: 1px;
+    border-radius: 4px;
+    border-bottom: 1px solid #EC3E62;
+    margin: 6px;
+    align-self: center;
+}
+
+.ser input{
+    padding: 4px;
+    height: 17px;
+    border: none;
+    outline: none;
+}
+
+
+.lister{
+    width: 100%;
+    background-color: #EC3E62;
+    height: 300px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+.lis{
+    padding: 16px;
+    font-size: larger;
+    color: antiquewhite;
+}
+
+.ffl{
+    color: #EC3E62;
+    margin: 14px;
+}
+
+.ff{
+    width: 401px;
+    text-align: center;
+    margin: auto;
+}
+
+.ff a{
+    text-decoration: none;
+    color: #EC3E62;
+    font-weight: 600;
+}
+
+/*----Cadastro----*/
+
+.ad{
+    background-color: #EC3E62;
+    width: 600px;
+    height: 300px;
+    align-self: center;
+    text-align: center;
+}
+
+.asd{
+    width: 300px;
+    color: white;
+    top: 45px;
+    position: relative;
+    margin: auto;
+}
+
+.asd input{
+    font-size: large;
+    color: white;
+    padding: 7px;
+    margin: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    width: 250px;
+}
+
+.asd button{
+    border: 1px solid whitesmoke;
+    background: transparent;
+    outline: none;
+    padding: 11px;
+    border-radius: 6px;
+    width: 140px;
+    color: white;
+    transition: 0.3s;
+}
+
+.asd button:hover{
+    background-color: white;
+    color: #EC3E62;
+    transition: 0.3s;
+}
+
+.asd h3{
+    text-align: start;
+    padding: 0px;
+    margin: 3px;
+    margin-left: 25px;
+}
+
+form{
+    height: 300px;
+}
+
+.close{
+    float: right;
+    margin-right: 12px;
+    padding: 10px;
+    color: white;
+}
+
+.op{
+    display: flex;
+}
+
+.teste{
+    display: none;
+    background: white;
+    color: #EC3E62;
+    position: absolute;
+    top: 133px;
+    width: 567px;
+    height: 41px;
+    border-radius: 0px 0px 12px 12px;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    margin: 0px;
+    transition: 0.3s;
+    animation: offset 0.3s;
+}
+
+
+/***-----Busca-------*****/
