@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>DoReact</title>
+</head>
+<body>
+    
+    <div class="tt">
+        <div class="bx">
+
+            <div class="bc">
+                <div class="nm">
+                    <h2>DoReact</h2>
+                </div>
+    
+                <div class="serc">
+                   <div class="ser">
+                       <input type="text" id="filtro-nome">
+                   </div>
+    
+                   <i onclick="openClose()" class="fas fa-plus-square ii"></i>
+                </div>
+            </div>
+
+            <div class="lister">
+                <div class="lis">
+                        <table>
+                            <tbody>
+                                <% membros.forEach(memb =>{%> 
+                                    <tr>
+                                        <td><%= memb.nome %> => <%= memb.numero %></td>
+                                    </tr>
+                                <%})%>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+            <div class="ffl">
+                <div class="ff">
+                    <h5>Uma simples aplicacao em React para registro e listagem dos membros Comunidade Javascript de Maputo </h5>
+                    <a href="http://www.jsconfmoz.com/">www.jsconfmoz.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add">
+        <div class="ad">
+            <div class="close">
+                <i onclick="closeOpen()" class="fas fa-times"></i>
+            </div>
+
+            <form method="POST" action="/cadastrar">
+
+                <div class="asd">
+                <h3>Nome:</h3>
+                <input type="text" name="nome"><br>
+    
+                <h3>Numero:</h3>
+                <input type="text" name="numero"><br>
+    
+                <button type="submit">Cadastrar</button>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+
+    <script src="../js/react.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/48b1ba7f30.js" crossorigin="anonymous"></script>
+
+    <script>
+        $('#filtro-nome').keyup(function() {
+        var nomeFiltro = $(this).val().toLowerCase();
+        console.log(nomeFiltro);
+        $('table tbody').find('tr').each(function() {
+            var conteudoCelula = $(this).find('td:first').text();
+            console.log(conteudoCelula);
+            var corresponde = conteudoCelula.toLowerCase().indexOf(nomeFiltro) >= 0;
+            $(this).css('display', corresponde ? '' : 'none');
+        });
+    });
+    </script>
+</body>
+</html>
